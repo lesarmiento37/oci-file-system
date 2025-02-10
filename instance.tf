@@ -10,7 +10,7 @@ resource "oci_core_instance" "test_instance" {
   } 
 
   create_vnic_details {
-                subnet_id = 
+                subnet_id = oci_core_subnet.public_subnet_2.id
             }
 
   availability_domain = data.oci_identity_availability_domains.ad.availability_domains[0].name

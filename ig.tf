@@ -1,11 +1,11 @@
 resource "oci_core_internet_gateway" "internet_gateway" {
-  compartment_id = var.compartment_id
+  compartment_id = oci_identity_compartment.leonardo.id
   vcn_id         = oci_core_vcn.main_vcn.id
   display_name   = "LeoInternetGateway"
 }
 
 resource "oci_core_route_table" "internet_route" {
-  compartment_id = var.compartment_id
+  compartment_id = oci_identity_compartment.leonardo.id
   vcn_id         = oci_core_vcn.main_vcn.id
   display_name   = "LeoInternetRouteTable"
 
