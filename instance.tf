@@ -2,16 +2,16 @@
 resource "oci_core_instance" "test_instance" {
   # Instance details
   #availability_domain = data.oci_identity_availability_domains.ad.names[0]
-  compartment_id      = oci_identity_compartment.leonardo.id
-  shape               = "VM.Standard.E2.1" 
+  compartment_id = oci_identity_compartment.leonardo.id
+  shape          = "VM.Standard.E2.1"
   # Instance metadata for SSH access
   metadata = {
-    ssh_authorized_keys = file("ssh-key-2025-02-07.pub")  
-  } 
+    ssh_authorized_keys = file("ssh-key-2025-02-07.pub")
+  }
 
   create_vnic_details {
-                subnet_id = oci_core_subnet.public_subnet_2.id
-            }
+    subnet_id = oci_core_subnet.public_subnet_1.id
+  }
 
   availability_domain = data.oci_identity_availability_domains.ad.availability_domains[0].name
 

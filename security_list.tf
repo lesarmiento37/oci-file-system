@@ -4,7 +4,7 @@ resource "oci_core_security_list" "public_security_list" {
   display_name   = "LeoPublicSecurityList"
 
   ingress_security_rules {
-    protocol = "6"  # TCP
+    protocol = "6" # TCP
     source   = "0.0.0.0/0"
     tcp_options {
       min = 22
@@ -13,12 +13,12 @@ resource "oci_core_security_list" "public_security_list" {
   }
 
   ingress_security_rules {
-    protocol = "1"  # ICMP
+    protocol = "1" # ICMP
     source   = "0.0.0.0/0"
   }
 
   ingress_security_rules {
-    protocol = "all"  # My IP
+    protocol = "all" # My IP
     source   = "186.116.221.81/32"
   }
 
