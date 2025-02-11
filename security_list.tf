@@ -22,6 +22,11 @@ resource "oci_core_security_list" "public_security_list" {
     source   = "186.116.221.81/32"
   }
 
+  ingress_security_rules {
+    protocol = "all"
+    source   = "192.168.0.0/16"
+  }
+
   egress_security_rules {
     protocol    = "all"
     destination = "0.0.0.0/0"
