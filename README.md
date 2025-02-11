@@ -43,10 +43,17 @@ This project can be useful in various real-world scenarios, including:
 
 ## Test infrastructure
 - **After Applying this is the terraform state list**:
+
   ![image](https://github.com/user-attachments/assets/c1ef187a-0c43-4b33-b0a9-7615b78f14ae)
+
+  
 - **Testing Allowed instance**:
+
   ![image](https://github.com/user-attachments/assets/058e29aa-5235-4b09-94e0-4769d482a5a3)
+
+  
 - **Testing Not Allowed instance**:
+
   ![image](https://github.com/user-attachments/assets/492b2280-222e-4887-81e5-156829e9d6ee)
 
 
